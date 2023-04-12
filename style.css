@@ -162,7 +162,7 @@ section p {
     border-radius: 50%;
   }
     
-    @media only screen and (max: width 600px) {
+    @media only screen and (max-width: 600px) {
         .service{
             width: 100px;
             margin: 2rem 0;
@@ -190,7 +190,6 @@ section p {
   
   .episode__content {
     border-top: 2px solid #fff;
-    #display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 10px;
     padding: 15px 0;
