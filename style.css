@@ -24,10 +24,18 @@ button {
     border: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body {
+    background: #444;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  }
 
 .container {
     max-width: 1200px;
@@ -73,7 +81,7 @@ body {
 
 /* Header */
 header {
-    background-image: url('images/img7.png');
+    background-image: url('images/img.png');
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -92,7 +100,7 @@ header {
 }
   
 .hero h1 {
-    font-size: 100px;
+    font-size: 75px;
     margin-bottom: 20px;
 }
   
@@ -105,6 +113,14 @@ header {
     font-size: 28px;
     margin-bottom: 50px;
 }
+
+/* gradient source: https://uigradients.com/#Wiretap */
+/* decreased transparency to 80% */
+.highlight {
+    background-image: linear-gradient(to right, #F27121cc, #E94057cc, #8A2387cc);
+    border-radius: 6px;
+    padding: 3px 6px;
+  }
 
 /* Sections */
 section {
@@ -120,6 +136,85 @@ section p {
     font-size: 18px;
     margin-bottom: 30px;
 }
+
+/* Set services section styles */
+#services {
+    padding: 4rem 0;
+    text-align: center;
+}
+  
+  
+  #services h2 {
+    margin-bottom: 2rem;
+  }
+
+  .service {
+    width: 30%;
+    display: inline-block;
+    padding: 0 2rem;
+    text-align: center;
+
+  }
+
+  .service img {
+    width: 200px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+  }
+    
+    @media only screen and (max: width 600px) {
+        .service{
+            width: 100px;
+            margin: 2rem 0;
+        }
+    }
+
+
+/* Set best practicals section styles */
+.episode {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+  }
+  
+  .episode__number {
+    font-size: 5vw;
+    font-weight: 600;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
+  }
+  
+  .episode__content {
+    border-top: 2px solid #fff;
+    #display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .episode__content .title {
+    font-weight: 600
+  }
+  
+  .episode__content .story {
+    line-height: 26px;
+  }
+  
+  @media (max-width: 600px) {
+    .episode__content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .episode__content .story {
+      font-size: 15px;
+    }
+  }
 
 
 .cta {
